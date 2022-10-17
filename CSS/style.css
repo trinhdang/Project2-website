@@ -1,0 +1,378 @@
+
+/* MOBILE FIRST APPROACH:
+  If the screen is less equal than 425px:
+  screen <= 425px
+  CSS styles for smartphones - DEFAULT 
+*/
+
+body {
+	background: white;	
+	font-family: "Times New Roman", serif;
+}
+
+* {/*star symbol means all HTML elements*/
+	box-sizing: border-box;/*Ref: https://www.w3schools.com/css/css3_box-sizing.asp*/
+	margin: 0;
+	padding: 0;
+}
+
+/*------------------------------------*/
+/*Nav Bar Styles*/
+nav {
+	min-height: 5vh;
+	background-color:#ABEBC6;
+	
+	/*Centralization*/
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	
+	display: inline-block;
+}
+
+nav ul li {
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+
+	/*dropdown menu*/
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;  
+	
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.active {
+	background-color: orange;
+}
+
+nav ul li a:hover:not(.active) {
+	background-color: gray;
+}
+
+
+/*Curtain Menu*/
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.overlay a {
+	font-size: 20px
+}
+.overlay .closebtn {
+	font-size: 40px;
+	top: 15px;
+	right: 35px;
+}
+
+/*HIDE HORIZONTAL MENU ON SMALL SCREEN*/
+nav ul {
+	display: none;
+}
+
+/*------------------------------------*/
+/*Set Styles for footer*/
+footer {
+	min-height: 5vh;
+	background: #F4D03F;
+
+	/*Centralize the content inside this element both vertically and horizontally*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	text-align: center;
+	font-size: 20px;
+}
+
+/*------------------------------------*/
+/*Set styles for main area*/
+main {
+	min-height: 80vh;
+	background: white;
+}
+
+section {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+
+/*-----------------------*/
+/*Set styles for the SLIDESHOW */
+/*Centralize the slideShowImage*/
+#slideShowImage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	/*Set the image height and width for smartphones*/
+	height: 200px;
+}
+
+/*-----------------------*/
+/*Set style for 3 columns*/
+ .container-1 {	
+	/*Use display: flex to change the layout*/
+	display: flex;
+	flex-direction: column;	
+ }
+ 
+ .topic-box {
+	margin: 10px;
+	padding: 30px;
+	border: 1px solid black;
+	
+	/*Create box equal size*/
+	flex: 1;
+ }
+ 
+ .container-1 .topic-box h3 {	 
+	 text-align: center;
+	 font-size: 40px;
+	 margin-bottom: 20px;
+ }
+ 
+ .container-1 .topic-box p {
+	  margin-top: 20px;
+	  text-align: center;
+	  line-height: 24px;
+ }
+ 
+ .container-1 .topic-box img {
+	 /*Centralize the image*/
+	 display: block;	 
+	 margin-left: auto;
+	 margin-right: auto;
+	 
+	 /*Make the image responsive*/
+	 height: 100px;
+	 width: auto;
+ }
+ 
+ /*-----------------------*/
+ /*Set styles for the "READ MORE" button*/
+ .read-more-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	 
+
+	border-radius: 5%;
+	background-color: orange;
+	margin-top: 20px;
+	padding: 5px 20px 5px 20px; 
+ }
+ 
+ /*-----------------------*/
+ /*Set styles for form and inputs inside form*/
+ .search-form {
+	 display: block;
+	 text-align: center;
+ }
+ 
+  .search-form input[type="submit"] {
+	padding: 5px 20px 5px 20px; 
+	background-color: orange;
+ }
+ 
+   .search-form input[type="text"] {
+	padding: 5px 20px 5px 20px; 
+ }
+ 
+ 
+/*------------------------------------------------------*/
+/*Contact form*/
+.contact-form input[type=text], .contact-form input[type=email],
+.contact-form select, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contact-form label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.contact-form input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.contact-form input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  /*Button*/
+  width: 100%;
+  margin-top: 0;
+}
+	
+.contact-form .col-25, .contact-form .col-75 {
+    width: 100%;
+    margin-top: 0;
+ }
+
+
+/* Clear floats after the columns */
+.contact-form .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*----------------------------------------------------------------*/
+ /*Else if sceen is less equal than 768px:
+   425px < screen <768px
+   CSS styles for tablets/ipad
+ */
+ @media only screen and (min-width: 426px) {
+	
+	/*Change the flex direction to row*/
+	.container-1 {
+		flex-direction: row;
+	}
+	
+	#slideShowImage {
+		/*Set the image height and width*/
+		height: 400px;
+	}
+	
+	/*SHOW HORIZONTAL MENU ON BIG SCREEN*/
+	nav ul {
+		display: inline-block;
+	}	
+	
+	/*BIG SCREEN: CONTACT FORM*/
+	.contact-form .col-25 {
+	  float: left;
+	  width: 25%;
+	  margin-top: 6px;
+	}
+
+	.contact-form .col-75 {
+	  float: left;
+	  width: 75%;
+	  margin-top: 6px;
+	}
+	
+	.contact-form input[type=submit] {
+	  width: 100px;
+	}	
+
+	/* Clear floats after the columns */
+	.contact-form .row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+
+	
+ }
+ 
+ /*----------------------------------------------------------------*/
+ /*Else: all screen bigger than 768px
+   768px < screen
+   CSS Styles for big screens 
+ */
+ @media only screen and (min-width: 769px) {
+	#slideShowImage {
+		/*Set the image height and width*/
+		height: 600px;
+	}
+
+	/*SHOW HORIZONTAL MENU ON BIG SCREEN*/
+	nav ul {
+		display: inline-block;
+	}	
+	
+	/*BIG SCREEN: CONTACT FORM*/
+	.contact-form .col-25 {
+	  float: left;
+	  width: 25%;
+	  margin-top: 6px;
+	}
+
+	.contact-form .col-75 {
+	  float: left;
+	  width: 75%;
+	  margin-top: 6px;
+	}	
+	
+	.contact-form input[type=submit] {
+	   width: 100px;
+	}
+
+	/* Clear floats after the columns */
+	.contact-form .row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+ }

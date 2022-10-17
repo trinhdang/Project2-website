@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+
+	<!--Navigation bar-->
+	<nav>	
+		<!--CURTAIN MENU ICON-->	
+		<div style="font-size:30px; cursor:pointer; margin-right: 30px; padding: 10px; background-color: pink;" 
+			 onclick="openNav()">&#9776; MENU</div>	
+		<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="page2.html">Contact</a></li>
+			<li><a href="page3.html">About</a></li>
+			<li><a href="page4.html">Gallery</a></li>
+		</ul>
+	</nav>
+	
+	
+	<!--CURTAIN MENU LAYER-->	
+	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+		<a href="index.html">HOME</a>
+		<a href="page2.html">CONTACT</a>
+		<a href="page3.html">ABOUT</a>
+		<a href="page4.html">GALLERY</a>
+	  </div>
+	</div>	
+	
+	<script>
+		function openNav() {
+		  document.getElementById("myNav").style.display = "block";
+		   document.getElementById("myNav").style.width = "50%";
+		}
+
+		function closeNav() {
+		  document.getElementById("myNav").style.display = "none";
+		}
+	</script>	
+	
+	
+	<!--main area-->
+	<main>
+		<!--SECTION 1-->
+		<section>
+			<img id="slideShowImage" src="Images/slideshow/image01.jpg" alt="Slideshow">
+		</section>
+		
+		<!--SECTION 2-->
+		<section>
+			<div class="container-1">
+				<!--Box 1-->
+				<div class="topic-box">
+					<h3>HTML</h3>
+					<img src="https://www.futurefundamentals.com/wp-content/uploads/2022/02/vv.jpg"></img>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis turpis ex. Quisque ultrices, ex sit amet fringilla mattis, justo nibh viverra leo, quis malesuada dui libero at. </p>
+					<button class="read-more-button">READ MORE</button>
+				</div>
+				
+				<!--Box 2-->
+				<div class="topic-box">
+					<h3>CSS</h3>
+					<img src="https://st2.depositphotos.com/4021139/7394/i/950/depositphotos_73943117-stock-photo-css-concept.jpg"></img>
+					<p>Vivamus malesuada cursus semper. Aenean et imperdiet lacus, id porttitor ipsum. Nulla pretium, dui sed sollicitudin condimentum, arcu sem suscipit ligula, ut molestie dui orci vitae est. </p>
+					<button class="read-more-button">READ MORE</button>
+				</div>			
+
+				<!--Box 3-->
+				<div class="topic-box">
+					<h3>JAVASCRIPT</h3>
+					<img src="https://www.mybluelinux.com/img/post/featured-images/0070.javascript.jpg"></img>
+					<p>Phasellus neque felis, venenatis ut dui sit amet, iaculis egestas tellus. Curabitur sit amet tortor dapibus odio commodo ornare sit amet ac urna. Sed cursus placerat orci, ut imperdiet nisi. </p>
+					<button class="read-more-button">READ MORE</button>
+				</div>						
+			</div>				
+		</section>		
+	
+		<!--SECTION 3-->
+		<section>
+			<form class="search-form" method="get" action="http://www.google.com/search" target="_blank">
+				<label>Keywords </label>
+				<input type="text" name="q" />
+				<input type="submit" value="SEARCH"/>
+			</form>
+		</section>	
+		
+	</main>
+
+  <!--Footer Area-->
+  <footer>
+		<div>
+			<p>Created By Daniel Dang<br>
+				ITWD5.130 Website Development. School of Computing. EIT.</p>	
+		</div>	
+  </footer>
+  
+  <!--Embed the Javascript file here-->
+  <script src="JS/javascript.js"></script>
+  
+</body>
+</html>

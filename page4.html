@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Responsive</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+
+	<!--Navigation bar-->
+	<nav>
+		<!--CURTAIN MENU ICON-->	
+		<div style="font-size:30px; cursor:pointer; margin-right: 30px; padding: 10px; background-color: pink;" 
+			 onclick="openNav()">&#9776; MENU</div>	
+			 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="page2.html">Contact</a></li>
+			<li><a href="page3.html">About</a></li>
+			<li><a href="page4.html" class="active">Gallery</a></li>
+		</ul>
+	</nav>
+	
+	<!--CURTAIN MENU LAYER-->	
+	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+		<a href="index.html">HOME</a>
+		<a href="page2.html">CONTACT</a>
+		<a href="page3.html">ABOUT</a>
+		<a href="page4.html">GALLERY</a>
+	  </div>
+	</div>	
+	
+	<script>
+		function openNav() {
+		  document.getElementById("myNav").style.display = "block";
+		   document.getElementById("myNav").style.width = "50%";
+		}
+
+		function closeNav() {
+		  document.getElementById("myNav").style.display = "none";
+		}
+	</script>		
+
+	<!--Header area-->
+	<header> 
+		<h1>GALLERY PAGE</h1>
+	</header>
+	
+	<!--main area-->
+	<main>THIS IS MAIN AREA
+		
+	</main>
+
+  <!--Footer Area-->
+  <footer>
+		<div>
+			<p>Created By Daniel Dang<br>
+				ITWD5.130 Website Development. School of Computing. EIT.</p>	
+		</div>	
+  </footer>
+</body>
+</html>

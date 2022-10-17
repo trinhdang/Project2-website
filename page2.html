@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+
+	<!--Navigation bar-->
+	<nav>		
+		<!--CURTAIN MENU ICON-->	
+		<div style="font-size:30px; cursor:pointer; margin-right: 30px; padding: 10px; background-color: pink;" 
+			 onclick="openNav()">&#9776; MENU</div>	
+			 
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="page2.html" class="active">Contact</a></li>
+			<li><a href="page3.html">About</a></li>
+			<li><a href="page4.html">Gallery</a></li>
+		</ul>
+	</nav>
+	
+	<!--CURTAIN MENU LAYER-->	
+	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+		<a href="index.html">HOME</a>
+		<a href="page2.html">CONTACT</a>
+		<a href="page3.html">ABOUT</a>
+		<a href="page4.html">GALLERY</a>
+	  </div>
+	</div>	
+	
+	<script>
+		function openNav() {
+		  document.getElementById("myNav").style.display = "block";
+		   document.getElementById("myNav").style.width = "50%";
+		}
+
+		function closeNav() {
+		  document.getElementById("myNav").style.display = "none";
+		}
+	</script>		
+
+	<!--Header area-->
+	<header> 
+		<h1>CONTACT FORM</h1>
+	</header>
+	
+	<!--main area-->
+	<main>
+		<div class="container">
+		  <form class="contact-form">
+			  <div class="row">
+				<div class="col-25">
+				  <label for="fname">First Name</label>
+				</div>
+				<div class="col-75">
+				  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+				</div>
+			  </div>
+			  
+			  <div class="row">
+				<div class="col-25">
+				  <label for="lname">Last Name</label>
+				</div>
+				<div class="col-75">
+				  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				</div>
+			  </div>
+
+			  <div class="row">
+				<div class="col-25">
+				  <label for="email">Email</label>
+				</div>
+				<div class="col-75">
+				  <input type="email" id="email" name="email" placeholder="Your email..">
+				</div>
+			  </div>
+			  
+			  <div class="row">
+				<div class="col-25">
+				  <label for="country">City</label>
+				</div>
+				<div class="col-75">
+				  <select id="city" name="city">
+					<option value="auckland">Auckland</option>
+					<option value="gisborne">Gisborne</option>
+					<option value="napier">Napier</option>
+				  </select>
+				</div>
+			  </div>
+			  
+			  <div class="row">
+				<div class="col-25">
+				  <label for="subject">Message</label>
+				</div>
+				<div class="col-75">
+				  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+				</div>
+			  </div>
+			  
+			  <br>
+			  <div class="row">
+				<input type="submit" value="Submit">
+			  </div>
+		  </form>
+		</div>		
+	</main>
+
+  <!--Footer Area-->
+  <footer>
+		<div>
+			<p>Created By Daniel Dang<br>
+				ITWD5.130 Website Development. School of Computing. EIT.</p>	
+		</div>	
+  </footer>
+</body>
+</html>
